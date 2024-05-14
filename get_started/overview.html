@@ -1,0 +1,345 @@
+ <!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; blades 0.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/mytheme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/on_pyg_load.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Key Concepts" href="key_concepts.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/blades_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#experiment-results">Experiment Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#cluster-deployment">Cluster Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#built-in-implementations">Built-in Implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attacks">Attacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defenses">Defenses</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#data-partitioners">Data Partitioners:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dirichlet-partitioner">Dirichlet Partitioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sharding-partitioner">Sharding Partitioner</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#citation">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="key_concepts.html">Key Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Example Gallery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../_examples/index.html">Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Package Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/aggregators.html">Aggregators</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">blades</a>
+      </nav>
+
+      <div class="wy-nav-content">
+<!-- Google Tag Manager (noscript) -->
+<noscript
+  ><iframe
+    src="https://www.googletagmanager.com/ns.html?id="
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe
+></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="dask-nav container-fluid">
+  <ul>
+    <li class="logo">
+      <a href="https://blades.readthedocs.io">
+        <img
+          class="caption"
+          src="../_static/img/blades_title.png"
+        />
+      </a>
+    </li>
+
+    <li>
+      <a href="https://github.com/fedlib/fedlib.git">FedLib</a>
+    </li>
+
+    <li>
+      <a href="https://blades.readthedocs.io/en/latest/">Blades</a>
+    </li>
+
+    <li>
+      <a href="https://github.com/lishenghui/blades/tree/master/examples">Examples</a>
+    </li>
+
+    <li>
+      <a href="https://github.com/fedlib/fedlib.git">Github</a>
+    </li>
+  </ul>
+</nav>
+
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/get_started/overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h1>
+<div style="text-align: center;">
+<a href="https://arxiv.org/pdf/2206.05359.pdf">
+    <img alt="Tests Status" src="https://img.shields.io/badge/arXiv-2206.05359-red?logo=arxiv&style=flat-square&link=https%3A%2F%2Farxiv.org%2Fpdf%2F2206.05359.pdf"/>
+</a>
+<a href="https://github.com/lishenghui/blades">
+    <img alt="Build Status" src="https://img.shields.io/github/last-commit/lishenghui/blades/master?logo=Github"/>
+</a>
+<a href="https://github.com/lishenghui/blades/actions/workflows/unit-tests.yml">
+    <img alt="Tests Status" src="https://github.com/lishenghui/blades/actions/workflows/unit-tests.yml/badge.svg?branch=master"/>
+</a>
+<a href="https://blades.readthedocs.io/en/latest/?badge=latest">
+    <img alt="Docs" src="https://readthedocs.org/projects/blades/badge/?version=latest"/>
+</a>
+<a href="https://pytorch.org/get-started/pytorch-2.0/">
+    <img alt="Docs" src="https://img.shields.io/badge/Pytorch-2.0-brightgreen?logo=pytorch&logoColor=red"/>
+</a>
+<a href="https://docs.ray.io/en/releases-2.9.0/">
+    <img alt="Docs" src="https://img.shields.io/badge/Ray-2.9-brightgreen?logo=ray&logoColor=blue"/>
+</a>
+<a href="https://github.com/lishenghui/blades/blob/master/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/lishenghui/blades?logo=apache&logoColor=red"/>
+</a>
+</div><p align=center>
+     <img src="https://github.com/lishenghui/blades/blob/master/docs/source/images/client_pipeline.png" width="1000" alt="Blades Logo">
+</p></section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/lishenghui/blades
+<span class="nb">cd</span><span class="w"> </span>blades
+pip<span class="w"> </span>install<span class="w"> </span>-v<span class="w"> </span>-e<span class="w"> </span>.
+<span class="c1"># &quot;-v&quot; means verbose, or more output</span>
+<span class="c1"># &quot;-e&quot; means installing a project in editable mode,</span>
+<span class="c1"># thus any local modifications made to the code will take effect without reinstallation.</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>blades/blades
+python<span class="w"> </span>train.py<span class="w"> </span>file<span class="w"> </span>./tuned_examples/fedsgd_cnn_fashion_mnist.yaml
+</pre></div>
+</div>
+<p><strong>Blades</strong> internally calls <a class="reference external" href="https://docs.ray.io/en/latest/tune/tutorials/tune-output.html">ray.tune</a>; therefore, the experimental results are output to its default directory: <code class="docutils literal notranslate"><span class="pre">~/ray_results</span></code>.</p>
+</section>
+<section id="experiment-results">
+<h1>Experiment Results<a class="headerlink" href="#experiment-results" title="Permalink to this heading"></a></h1>
+<img alt="https://github.com/lishenghui/blades/blob/master/docs/source/images/fashion_mnist.png" src="https://github.com/lishenghui/blades/blob/master/docs/source/images/fashion_mnist.png" />
+<img alt="https://github.com/lishenghui/blades/blob/master/docs/source/images/cifar10.png" src="https://github.com/lishenghui/blades/blob/master/docs/source/images/cifar10.png" />
+</section>
+<section id="cluster-deployment">
+<h1>Cluster Deployment<a class="headerlink" href="#cluster-deployment" title="Permalink to this heading"></a></h1>
+<p>To run <strong>blades</strong> on a cluster, you only need to deploy <code class="docutils literal notranslate"><span class="pre">Ray</span> <span class="pre">cluster</span></code> according to the <a class="reference external" href="https://docs.ray.io/en/latest/cluster/user-guide.html">official guide</a>.</p>
+</section>
+<section id="built-in-implementations">
+<h1>Built-in Implementations<a class="headerlink" href="#built-in-implementations" title="Permalink to this heading"></a></h1>
+<p>In detail, the following strategies are currently implemented:</p>
+<section id="attacks">
+<h2>Attacks<a class="headerlink" href="#attacks" title="Permalink to this heading"></a></h2>
+<section id="general-attacks">
+<h3>General Attacks<a class="headerlink" href="#general-attacks" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Strategy</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Sourse</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Noise</strong></p></td>
+<td><p>Put random noise to the updates.</p></td>
+<td><p><a class="reference external" href="https://github.com/lishenghui/blades/blob/master/blades/adversaries/noise_adversary.py">Sourse</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Labelflipping</strong></p></td>
+<td><p><a class="reference external" href="https://www.usenix.org/conference/usenixsecurity20/presentation/fang">Fang et al. Local Model Poisoning Attacks to Byzantine-Robust Federated Learning</a>, <em>USENIX Security’ 20</em></p></td>
+<td><p><a class="reference external" href="https://github.com/lishenghui/blades/blob/master/blades/adversaries/labelflip_adversary.py">Sourse</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Signflipping</strong></p></td>
+<td><p><a class="reference external" href="https://ojs.aaai.org/index.php/AAAI/article/view/3968">Li et al. RSA: Byzantine-Robust Stochastic Aggregation Methods for Distributed Learning from Heterogeneous Datasets</a>, <em>AAAI’ 19</em></p></td>
+<td><p><a class="reference external" href="https://github.com/lishenghui/blades/blob/master/blades/adversaries/signflip_adversary.py">Sourse</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>ALIE</strong></p></td>
+<td><p><a class="reference external" href="https://proceedings.neurips.cc/paper/2019/hash/ec1c59141046cd1866bbbcdfb6ae31d4-Abstract.html">Baruch et al. A little is enough: Circumventing defenses for distributed learning</a> <em>NeurIPS’ 19</em></p></td>
+<td><p><a class="reference external" href="https://github.com/lishenghui/blades/blob/master/blades/adversaries/alie_adversary.py">Sourse</a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>IPM</strong></p></td>
+<td><p><a class="reference external" href="https://arxiv.org/abs/1903.03936">Xie et al. Fall of empires: Breaking byzantine- tolerant sgd by inner product manipulation</a>, <em>UAI’ 20</em></p></td>
+<td><p><a class="reference external" href="https://github.com/lishenghui/blades/blob/master/blades/adversaries/ipm_adversary.py">Sourse</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="adaptive-attacks">
+<h3>Adaptive Attacks<a class="headerlink" href="#adaptive-attacks" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Strategy</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Sourse</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>DistanceMaximization</strong></p></td>
+<td><p><a class="reference external" href="https://par.nsf.gov/servlets/purl/10286354">Shejwalkar et al. Manipulating the byzantine: Optimizing model poisoning attacks and defenses for federated learning</a>, <em>NDSS’ 21</em></p></td>
+<td><p><a class="reference external" href="https://github.com/lishenghui/blades/blob/master/blades/adversaries/minmax_adversary.py">Sourse</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="defenses">
+<h2>Defenses<a class="headerlink" href="#defenses" title="Permalink to this heading"></a></h2>
+<section id="robust-aggregation">
+<h3>Robust Aggregation<a class="headerlink" href="#robust-aggregation" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+</section>
+<section id="data-partitioners">
+<h1>Data Partitioners:<a class="headerlink" href="#data-partitioners" title="Permalink to this heading"></a></h1>
+<section id="dirichlet-partitioner">
+<h2>Dirichlet Partitioner<a class="headerlink" href="#dirichlet-partitioner" title="Permalink to this heading"></a></h2>
+<img alt="https://github.com/lishenghui/blades/blob/master/docs/source/images/dirichlet_partition.png" src="https://github.com/lishenghui/blades/blob/master/docs/source/images/dirichlet_partition.png" />
+</section>
+<section id="sharding-partitioner">
+<h2>Sharding Partitioner<a class="headerlink" href="#sharding-partitioner" title="Permalink to this heading"></a></h2>
+<img alt="https://github.com/lishenghui/blades/blob/master/docs/source/images/shard_partition.png" src="https://github.com/lishenghui/blades/blob/master/docs/source/images/shard_partition.png" />
+</section>
+</section>
+<section id="citation">
+<h1>Citation<a class="headerlink" href="#citation" title="Permalink to this heading"></a></h1>
+<p>Please cite our <a class="reference external" href="https://arxiv.org/abs/2206.05359">paper</a> (and the respective papers of the methods used) if you use this code in your own work:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inproceedings</span><span class="p">{</span><span class="n">li2024blades</span><span class="p">,</span>
+<span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">Blades</span><span class="p">:</span> <span class="n">A</span> <span class="n">Unified</span> <span class="n">Benchmark</span> <span class="n">Suite</span> <span class="k">for</span> <span class="n">Byzantine</span> <span class="n">Attacks</span> <span class="ow">and</span> <span class="n">Defenses</span> <span class="ow">in</span> <span class="n">Federated</span> <span class="n">Learning</span><span class="p">},</span>
+<span class="n">author</span><span class="o">=</span><span class="p">{</span><span class="n">Li</span><span class="p">,</span> <span class="n">Shenghui</span> <span class="ow">and</span> <span class="n">Ngai</span><span class="p">,</span> <span class="n">Edith</span> <span class="ow">and</span> <span class="n">Ye</span><span class="p">,</span> <span class="n">Fanghua</span> <span class="ow">and</span> <span class="n">Ju</span><span class="p">,</span> <span class="n">Li</span> <span class="ow">and</span> <span class="n">Zhang</span><span class="p">,</span> <span class="n">Tianru</span> <span class="ow">and</span> <span class="n">Voigt</span><span class="p">,</span> <span class="n">Thiemo</span><span class="p">},</span>
+<span class="n">booktitle</span><span class="o">=</span><span class="p">{</span><span class="mi">2024</span> <span class="n">IEEE</span><span class="o">/</span><span class="n">ACM</span> <span class="n">Ninth</span> <span class="n">International</span> <span class="n">Conference</span> <span class="n">on</span> <span class="n">Internet</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">Things</span> <span class="n">Design</span> <span class="ow">and</span> <span class="n">Implementation</span> <span class="p">(</span><span class="n">IoTDI</span><span class="p">)},</span>
+<span class="n">year</span><span class="o">=</span><span class="p">{</span><span class="mi">2024</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="key_concepts.html" class="btn btn-neutral float-right" title="Key Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Shenghui Li.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      "gtm.start": new Date().getTime(),
+      event: "gtm.js",
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(
+    window,
+    document,
+    "script",
+    "dataLayer",
+    ""
+  );
+</script>
+<!-- End Google Tag Manager -->
+ 
+
+</body>
+</html>
